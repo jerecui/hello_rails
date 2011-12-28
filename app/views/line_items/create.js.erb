@@ -1,3 +1,9 @@
 $("#cart").html("<%= escape_javascript(render @cart) %>");
 
+<%if @cart.total_items>1%>
 $('#current_item').fadeTo(100, .1).delay(100).fadeTo(500, 1);
+<%end%>
+
+<%if @cart.total_items<=1 %>
+  $('#cart').show('slow', function(){alert});
+<%end%>
