@@ -7,3 +7,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+jQuery.ajaxSetup({
+	'beforeSend': function(xhr) {
+		xhr.setRequestHeader("Accept", "text/javascript")
+	}
+});
+
+jQuery.fn.submitWithAjax = function() {
+	this.submit(function(){
+		$.post($(this).attr("action"), $(this).serialize(), null, "script");
+	});
+};
+
+$(function(){
+	$("#add_to_cart").submitWithAjax();
+});
