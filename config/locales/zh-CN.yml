@@ -34,9 +34,29 @@ zh-CN:
      new:
         legend: "请输入您的详细信息"
      form:
-        name: "姓名"
         address_html: "地址"
-        email: "邮箱"
-        pay_type: "支付方式"
         pay_prompt_html: "请选择支付方式"
         submit: "提交订单"
+        
+  activerecord:
+     errors:
+        messages:
+           inclusion: "不包含于列表中"
+           blank: "不能为空字符"
+     models:
+        order: "订单"
+     attributes:
+        order:
+           address: "地址"
+           name: "姓名"
+           email: "邮箱"
+           pay_type: "支付方式"
+  errors:
+     template:
+        body: "如下字段出现错误"
+        header:
+           one: "有1个错误发生导致「%{model}」无法被保存。"
+           other: "有 %{count} 个错误发生导致「%{model}」无法被保存。"
+  thanks: "谢谢您的订单，欢迎再次光临"      
+        
+        

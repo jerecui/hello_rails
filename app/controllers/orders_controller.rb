@@ -52,7 +52,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
 		Cart.destroy(session[:cart_id])
-        format.html { redirect_to store_url, :notice=>"Thank you for your order."}
+        format.html { redirect_to store_url, :notice=>I18n.t('.thanks')}
         format.json { render json: @order, status: :created, location: @order }
       else
         format.html { render action: "new" }
