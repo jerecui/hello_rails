@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Dave Thomas
+  address: MyText
+  email: dave@example.com
+  pay_type: Check
+
+two:
+  name: Jeremy
+  address: MyText
+  email: jeremy@ror.com
+  pay_type: Credit card
